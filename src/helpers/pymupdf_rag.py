@@ -1169,7 +1169,8 @@ def to_markdown(
                 tables=True,
             )
 
-        parms.md_string = parms.md_string.replace(" ,", ",").replace("-\n", "")
+        parms.md_string = parms.md_string.replace(" ,", ",")
+        # Tuija took this away from the end of the line above: .replace("-\n", "")
 
         # write any remaining tables and images
         parms.md_string += output_tables(parms, None)
